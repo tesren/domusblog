@@ -14,7 +14,7 @@
                 $categories = get_the_category(get_the_ID());?>
 
                 <div class="container-fluid" style="position:relative;">
-                    <img class="w-100" src="<?php echo $backgroundImg[0]?>" alt="<?php the_title(); ?>">
+                    <img class="w-100 featured-img" src="<?php echo $backgroundImg[0]?>" alt="<?php the_title(); ?>">
                     <div class="fondo-oscuro"></div>
                     <h1 id="short-title"><?php echo the_title(); ?></h1>
 
@@ -27,15 +27,25 @@
 
                         <span class="date ms-3"><?php echo get_the_date();?></span>
                     </div>
+
+                    <div class="row autor">
+                        <div class="col-5 pe-0"><?php echo get_avatar( get_the_author_email() ); ?></div>
+                        <div class="col-7 ps-0 pt-2">
+                            <span class="fw-bold fs-4 autor-name"><?php echo get_the_author(); ?></span>
+                            <span class="fw-light fs-5">Autor</span>
+                        </div>
+                        
+                    </div>
+
                 </div>
 
                 <div class="container my-5">
                     <h1><?php echo the_title(); ?></h1>
                     <p><?php echo the_content(); ?></p>
+                </div>
 
-                    <?php $comments = get_comments( ); 
-                    var_dump($comments);?>
- ?>
+                <div class="row justify-content-center text-center mt-5">
+                  <?php comments_template(); ?>
                 </div>
 
             </div>

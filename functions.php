@@ -7,6 +7,7 @@ function domus_theme_support()
     add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
     add_theme_support( 'custom-header' );
+    add_theme_support('html5', array('comment-list', 'comment-form') );
 }
 
 add_action('after_setup_theme', 'domus_theme_support');
@@ -96,6 +97,15 @@ add_filter( 'clean_url', 'os_async_scripts', 11, 1 );
         require_once get_template_directory() . '/classes/class-wp-bootstrap-navwalker.php';
     }
     add_action( 'after_setup_theme', 'register_navwalker' );
+
+    /**
+     * Register Custom Comments Walker
+     */
+    function register_commentswalker(){
+        require_once get_template_directory() . '/inc/walker-comments.php';
+    }
+    add_action( 'after_setup_theme', 'register_commentswalker' );
+
 
 /*
 		==========================================

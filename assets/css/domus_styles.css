@@ -33,6 +33,10 @@ p{
     margin-bottom: 0rem;
 }
 
+.secondary-text{
+    color: #707070;
+}
+
 .container-fluid, .row, .col, .col-lg-6{
     padding: 0;
     margin: 0;
@@ -62,6 +66,11 @@ p{
     right: 11px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+}
+#front-page .fondo-oscuro:hover{
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.3s;
 }
 
 .recent-posts img{
@@ -102,7 +111,54 @@ p{
 
 /*Single post*/
 
-#single-post img{
+.btn-azul{
+    background-color: #34445f;
+    color: #FFF;
+    font-weight: bold;
+    transition: 0.2s;
+    width: 100%;
+}
+.btn-azul:hover{
+  background-color: #080F24;
+  transition: 0.3s;
+}
+
+.form-comentarios label{
+    font-weight: 700;
+}
+
+.comment-author-link{
+    color: black;
+    text-decoration: none;
+}
+
+.comment-reply-link{
+    color: #707070;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.avatar{
+    border-radius: 50%;
+}
+
+.autor{
+    position: absolute;
+    bottom: 30px;
+    left: 70%;
+    z-index: 5;
+    color: #FFF;
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.autor-name{
+    white-space: nowrap;
+    width: 90%;
+}
+
+#single-post .featured-img{
     height: 35vh;
     object-fit: cover;
 }
@@ -114,7 +170,7 @@ p{
     bottom: 10px;
     left: 100px;
     z-index: 5;
-    width: 90%;
+    width: 65%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
