@@ -4,6 +4,8 @@
         
          <ol class="comment-list">
              <?php 
+
+             //$replytext = pll_e('Responder');
              
              $args = array(
                  'walker'       => new comment_walker(),
@@ -12,7 +14,7 @@
                  'callback'     => null,
                  'end-callback' => null,
                  'type'         => 'all',
-                 'reply-text'   => 'Reply',
+                 'reply-text'   => pll('Responder'),
                  'page'         => '',
                  'per_page'     => '',
                  'avatar_size'  => '',
@@ -29,16 +31,24 @@
 
             <!--comentarios cerrados-->
            <?php if(!comments_open() && get_comments_number() ): ?>
-                <p>Comentarios cerrados</p>
+                <p><?php echo pll_e('Comentarios Cerrados'); ?></p>
          <?php endif;
         endif;?>
 
     <div class="text-center form-comentarios">
         <?php 
 
+            //traducciones
+            /*  $nombre = pll_e('Nombre');
+            $email  = pll_e('Correo');
+            $website= pll_e('Sitio Web');
+            $comment =pll_e('Comentario');  */
+            //$labelSubmit= pll_e('Enviar');
+            //$titleReply= pll_e('Deja un comentario');
+
             $fields = array(
 
-                'author' => '<div class="form-group text-start mb-3"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> <span class="required">*</span> <input id="author" name="author" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author'] ) . '" required /></div>',
+                'author' => '<div class="form-group text-start mb-3"><label for="author">' . __( 'Nombre', 'domainreference' ) . '</label> <span class="required">*</span> <input id="author" name="author" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author'] ) . '" required /></div>',
                     
                 'email' => '<div class="form-group text-start mb-3"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> <span class="required">*</span><input id="email" name="email" class="form-control" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" required /></div>',
                     

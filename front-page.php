@@ -5,7 +5,17 @@
 
 <div class="container mb-5" id="front-page">
 
-    <h1 class="ms-2 mt-5 mb-2">Recent Posts</h1>
+<div class="row justify-content-between ms-0 ms-lg-2 mt-5 mb-4 mb-lg-2">
+
+    <div class="col-lg p-0 text-center text-lg-start">
+      <h1 class=""><?php echo pll_e('Entradas Recientes') ?></h1>
+    </div>
+
+    <div class="col-lg-3 p-0 text-center text-lg-end">
+        <?php get_search_form(); ?>
+    </div>
+    
+</div>
     
     <?php if( have_posts() ): 
       $j=1; ?>

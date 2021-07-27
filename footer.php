@@ -10,7 +10,7 @@
         <div class="row mb-5">
             <div class="col-md-12 copyright">
                 <div>Copyright© 2021 Domus Vallarta Inmobiliaria</div>
-                <div>Conoce nuestras <a style="color: #fffefb;" href="https://domusvallarta.com/politicas-de-privacidad">Políticas de Privacidad</a> </div>
+                <div><?php echo pll_e('Conoce nuestras'); ?> <a style="color: #fffefb;" href="https://domusvallarta.com/politicas-de-privacidad"><?php echo pll_e('Políticas de Privacidad'); ?></a> </div>
 
             </div>
         </div>
@@ -43,14 +43,14 @@
     <div class="col-6 col-md-4">
         <div class="row">
             <div class="col-md-12 mt-1" style="font-size: 18px;">
-                 <ul class="list-inline"> <h5>Síguenos</h5>
+                 <ul class="list-inline"> <h5><?php echo pll_e('Síguenos'); ?></h5>
                     <li class="list-inline-item"><a href="https://www.facebook.com/DomusVallartaInmobiliaria/" style="font-size:34px; color:#fff;"><i class="fab fa-facebook-square"></i><!-- <img width="50" src="https://domusvallarta.com/images/icons/fb-icon.png" alt="facebook"> --> </a></li>
                     <li class="list-inline-item"><a href="https://www.instagram.com/domus_vallarta/" style="font-size:34px; color:#fff;"><i class="fab fa-instagram-square"></i><!-- <img width="50" src="https://domusvallarta.com/images/icons/ig-icon.png" alt="Instagram"> --> </a></li>
                 </ul>
             </div>
             <div class="col-md-12">
                 
-                    <ul class="afiliaciones-icons"><h5>Afiliados</h5>
+                    <ul class="afiliaciones-icons"><h5><?php echo pll_e('Afiliados'); ?></h5>
                       <li class="partners-icons i-ampi">Ampi Riviera Nayarit</li>
                       <li class="partners-icons i-realtor">Realtor Association</li>
                         <li class="partners-icons i-mlv">Multi List Vallarta</li>

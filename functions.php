@@ -271,4 +271,129 @@ add_filter( 'clean_url', 'os_async_scripts', 11, 1 );
     }
 
 
+    function domus_set_strings_transtaltion(){
+        
+        $strings = array(
+            array(
+                'name'     =>'agenda_aqui',
+                'string'   =>'Agenda aquí',
+                'group'    =>'Header',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'register_tour',
+                'string'   =>'REGÍSTRATE PARA AGENDAR UN TOUR FÍSICO O VIRTUAL',
+                'group'    =>'Header',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'recent_post',
+                'string'   =>'Entradas Recientes',
+                'group'    =>'Front Page',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'author',
+                'string'   =>'Autor',
+                'group'    =>'Single Page',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'search',
+                'string'   =>'Buscar',
+                'group'    =>'Search Form',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'reply',
+                'string'   =>'Responder',
+                'group'    =>'Comments',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'closed_comments',
+                'string'   =>'Comentarios Cerrados',
+                'group'    =>'Comments',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'name',
+                'string'   =>'Nombre',
+                'group'    =>'Comments',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'correo',
+                'string'   =>'Correo',
+                'group'    =>'Comments',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'website',
+                'string'   =>'Sitio Web',
+                'group'    =>'Comments',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'submit',
+                'string'   =>'Enviar',
+                'group'    =>'Comments',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'leave_comment',
+                'string'   =>'Deja un comentario',
+                'group'    =>'Comments',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'comment',
+                'string'   =>'Comentario',
+                'group'    =>'Comments',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'results',
+                'string'   =>'Resultados',
+                'group'    =>'Search Results',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'follow_us',
+                'string'   =>'Síguenos',
+                'group'    =>'Footer',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'affiliates',
+                'string'   =>'Afiliados',
+                'group'    =>'Footer',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'know_our',
+                'string'   =>'Conoce nuestras',
+                'group'    =>'Footer',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'privacy_policy',
+                'string'   =>'Políticas de Privacidad',
+                'group'    =>'Footer',
+                'multiline'=>false,
+            ),
+           
+        );
+
+
+        foreach ($strings as $string ) {
+            
+            pll_register_string( $string['name'], $string['string'], $string['group'], $string['multiline'] );
+        };
+
+    }
+
+    add_action('init', 'domus_set_strings_transtaltion');
+
+
 ?>

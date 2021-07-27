@@ -21,11 +21,11 @@
                     <div class="d-flex">
                         <?php $i=0;
                           foreach($categories as $category): ?>
-                              <span class="category px-2 me-4"><?php echo $category->name ; ?></span>
+                              <span class="category px-2 me-2 me-lg-4"><?php echo $category->name ; ?></span>
                           <?php $i++;
                           endforeach; ?>
 
-                        <span class="date ms-3"><?php echo get_the_date();?></span>
+                        <span class="date ms-2 ms-lg-3"><?php echo get_the_date();?></span>
                     </div>
 
                     <div class="row autor">
@@ -43,6 +43,34 @@
                     <h1><?php echo the_title(); ?></h1>
                     <p><?php echo the_content(); ?></p>
                 </div>
+
+
+                <?php 
+                    $title = get_the_title();
+                    $permalink = get_the_permalink();
+                    $twitterHandler = ( get_option('twitter_handler') ? '&amp;via='.esc_attr( get_option('twitter_handler') ) : '' );
+
+                    $twitter = 'https://twitter.com/intent/tweet?text=Hey! Read this: ' . $title . '&amp;url=' . $permalink . $twitterHandler .'';
+                    $facebook = 'https://www.facebook.com/sharer/sharer.php?u=' . $permalink;
+                    $linkedIn = 'https://www.linkedin.com/sharing/share-offsite/?url=' . $permalink;
+                ?>
+                 
+                <aside class="social-media">
+                    
+                        <a href="<?php echo $facebook ?>" class="s-item facebook" target="_blank">
+                            <span class="fab fa-facebook-f"></span>
+                        </a>
+                        
+                        <a href="<?php echo $twitter ?>" class="s-item twitter" target="_blank">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+                        
+
+                        <a href="<?php echo $linkedIn ?>" class="s-item gplus" target="_blank">
+                            <span class="fab fa-linkedin-in"></span>
+                        </a>
+
+                </aside>
 
                 <div class="row justify-content-center text-center mt-5">
                   <?php comments_template(); ?>

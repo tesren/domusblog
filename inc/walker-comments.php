@@ -43,14 +43,14 @@
 
 			<article <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
 				
-            <div class="row">
+            <div class="row justify-content-center">
                 <!--Imagen gravatar-->
-                <div class="col-2 p-0">
+                <div class="col-md-2 p-0">
                     <figure class="gravatar"><?php echo get_avatar( $comment, 100, '[default gravatar URL]', 'Author’s gravatar' ); ?></figure>
                 </div>
 
                 <!--Autor, fecha-->
-                <div class="col-10 p-0">
+                <div class="col-md-10 p-0">
                     <div class="comment-meta post-meta" role="complementary">
 
                         <span class="comment-author pe-2">

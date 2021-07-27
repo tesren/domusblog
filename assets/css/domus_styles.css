@@ -52,6 +52,37 @@ p{
     color: #FFF;
 }
 
+.pagination {
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.page-numbers{
+    color: #34445f !important;
+}
+
+.current{
+    color: black;
+}
+
+.nav-links a{
+    text-decoration: underline !important;
+}
+
+#pre_header_menu{
+    margin-bottom: 0 !important;
+}
+
+#pre_header_menu a{
+    color: rgba(255,255,255,.55) !important;
+    text-decoration: none;
+    transition: 0.2s;
+}
+#pre_header_menu a:hover{
+    transition: 0.2s;
+    color: rgba(255,255,255,0.9) !important;
+}
+
 /*Home page*/
 #front-page a{
     text-decoration: none ;
@@ -110,6 +141,35 @@ p{
 }
 
 /*Single post*/
+
+.social-media{
+    position: fixed;
+    left: 0;
+    top: 40%;
+}
+
+.s-item {
+    display:block;
+    width: 40px;
+    height: 50px;
+    color: grey;
+    font-size: 25px;
+    line-height: 60px;
+    text-align: center;
+
+    transition:all linear 0.2s ;
+}
+
+.facebook:hover{color: #305891;}
+.twitter:hover{color: #3AAFD6;}
+.gplus:hover{color: #0e76a8; }
+
+
+#single-post {
+    position: relative;
+    overflow: hidden;
+    object-fit: contain;
+}
 
 .btn-azul{
     background-color: #34445f;
@@ -217,6 +277,18 @@ footer span{
     font-size: 0.7rem;
 }
 
+/*Search page*/
+#search-page .category{
+    background-color: #34445f;
+    border-radius: 4px;
+    color: #FFF;
+}
+
+#search-page a{
+    text-decoration: none;
+    color: initial;
+}
+
 /*Boton de whatsapp*/
 #whatsapp {
     position:fixed;
@@ -252,10 +324,61 @@ footer span{
 
 /*MEDIA QUERY*/
 @media (min-width: 360px) and (max-width: 767px) {
+
+    #single-post #short-title{
+        font-size: 2rem;
+        top: 60px;
+        left: 20px;
+        bottom: initial;
+        z-index: 5;
+        width: 99%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    #single-post .d-flex{
+        top: 20px;
+        left: 20px;
+        bottom: initial;
+    }
+
+    .autor{
+        bottom: initial;
+        top: 110px;
+        left: 20px;
+        max-width: 99%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
    
   }
 
 @media (min-width: 768px) and (max-width: 992px) {
+
+    #single-post #short-title{
+        font-size: 2rem;
+        bottom: 10px;
+        left: 30px;
+        width: 50%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .autor{
+        bottom: 30px;
+        left: 55%;
+        max-width: 300px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    #single-post .d-flex{
+        left: 30px;
+        bottom: 70px;
+    }
+    
     
 }
 
