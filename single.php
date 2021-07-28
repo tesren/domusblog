@@ -16,7 +16,7 @@
                 <div class="container-fluid" style="position:relative;">
                     <img class="w-100 featured-img" src="<?php echo $backgroundImg[0]?>" alt="<?php the_title(); ?>">
                     <div class="fondo-oscuro"></div>
-                    <h1 id="short-title"><?php echo the_title(); ?></h1>
+                    <h1 title="<?php echo the_title(); ?>" id="short-title"><?php echo the_title(); ?></h1>
 
                     <div class="d-flex">
                         <?php $i=0;
@@ -32,7 +32,7 @@
                         <div class="col-5 pe-0"><?php echo get_avatar( get_the_author_email() ); ?></div>
                         <div class="col-7 ps-0 pt-2">
                             <span class="fw-bold fs-4 autor-name"><?php echo get_the_author(); ?></span>
-                            <span class="fw-light fs-5">Autor</span>
+                            <span class="fw-light fs-5"><?php pll_e('Autor'); ?></span>
                         </div>
                         
                     </div>

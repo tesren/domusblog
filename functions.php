@@ -317,6 +317,12 @@ add_filter( 'clean_url', 'os_async_scripts', 11, 1 );
                 'multiline'=>false,
             ),
             array(
+                'name'     =>'awaiting_moderation',
+                'string'   =>'Su comentario está a la espera de moderación',
+                'group'    =>'Comments',
+                'multiline'=>false,
+            ),
+            array(
                 'name'     =>'name',
                 'string'   =>'Nombre',
                 'group'    =>'Comments',
@@ -355,6 +361,18 @@ add_filter( 'clean_url', 'os_async_scripts', 11, 1 );
             array(
                 'name'     =>'results',
                 'string'   =>'Resultados',
+                'group'    =>'Search Results',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'no_results',
+                'string'   =>'No hay resultados',
+                'group'    =>'Search Results',
+                'multiline'=>false,
+            ),
+            array(
+                'name'     =>'go_back',
+                'string'   =>'Volver',
                 'group'    =>'Search Results',
                 'multiline'=>false,
             ),

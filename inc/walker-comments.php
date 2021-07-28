@@ -46,7 +46,7 @@
             <div class="row justify-content-center">
                 <!--Imagen gravatar-->
                 <div class="col-md-2 p-0">
-                    <figure class="gravatar"><?php echo get_avatar( $comment, 100, '[default gravatar URL]', 'Author’s gravatar' ); ?></figure>
+                    <figure class="gravatar"><?php echo get_avatar( $comment, 100, 'http://0.gravatar.com/avatar/f45834feb5ac84a69cc8bbabe902f6da?s=96&d=mm&r=g', 'Author’s gravatar' ); ?></figure>
                 </div>
 
                 <!--Autor, fecha-->
@@ -62,7 +62,7 @@
 
                         <?php edit_comment_link('<p class="comment-meta-item">Edit this comment</p>','',''); ?>
                         <?php if ($comment->comment_approved == '0') : ?>
-                        <p class="comment-meta-item">Your comment is awaiting moderation.</p>
+                        <p class="comment-meta-item"><?php pll_e('Su comentario está a la espera de moderación'); ?></p>
                         <?php endif; ?>
                     </div>
 

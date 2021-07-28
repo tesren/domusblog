@@ -25,11 +25,11 @@
           $portada = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ) , 'full' );
           $categories = get_the_category(get_the_ID());?>
 
-                  <div class="recent-posts mb-4 col-12 col-md-<?php if($j>2){echo '4';}else{echo'6';}?>" style="position:relative;">
+                  <div class="recent-posts mb-4 col-12 col-lg-<?php if($j>2){echo '4';}else{echo'6';}?>" style="position:relative;">
                     <a href="<?php echo get_the_permalink(); ?>">
                       <img class="w-100" src="<?php echo $portada[0] ?>" alt="<?php echo the_title() ?>">
                       <div class="fondo-oscuro"></div>
-                      <h2 class="fs-2"><?php echo the_title();?></h2>
+                      <h2 title="<?php echo the_title();?>" class="fs-2"><?php echo the_title();?></h2>
 
                       <div class="d-flex">
                           <?php $i=0;

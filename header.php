@@ -33,7 +33,7 @@
                 'menu_class'        => "list-inline col-1", // (string) CSS class to use for the ul element which forms the menu. Default 'menu'.
                 'menu_id'           => "pre_header_menu", // (string) The ID that is applied to the ul element which forms the menu. Default is the menu slug, incremented.
                 'container'         => "div", // (string) Whether to wrap the ul, and what to wrap it with. Default 'div'.
-                'container_class'   => "row justify-content-end bg-azul pt-3", // (string) Class that is applied to the container. Default 'menu-{menu slug}-container'.
+                'container_class'   => "row justify-content-end bg-azul pt-0 pt-lg-3 ", // (string) Class that is applied to the container. Default 'menu-{menu slug}-container'.
                 'container_id'      => "language-buttons", // (string) The ID that is applied to the container.
                 //'fallback_cb'       => "", // (callable|bool) If the menu doesn't exists, a callback function will fire. Default is 'wp_page_menu'. Set to false for no fallback.
                 //'before'            => "", // (string) Text before the link markup.
@@ -52,12 +52,12 @@
 
       <div class="container-fluid bg-azul">
        
-            <nav id="mainHeader" class="navbar navbar-expand-lg navbar-dark justify-content-between" role="navigation" style="position:relative;">
+            <nav id="mainHeader" class="navbar navbar-expand-lg navbar-dark justify-content-between py-0 py-lg-2" role="navigation" style="position:relative;">
               <a class="navbar-brand" href="<?php echo get_home_url(); ?>" id="header-brand">
-                <img class="ms-5 my-2" src="<?php echo get_template_directory_uri() .'/assets/images/domus_logo_blanco.png';?>" id="nav_header_logo" alt="Logo" width="200px" height="auto">
+                <img class="ms-1 ms-lg-5 my-1 my-lg-2" src="<?php echo get_template_directory_uri() .'/assets/images/domus_logo_blanco.png';?>" id="nav_header_logo" alt="Logo" width="200px" height="auto">
               </a>
              
-              <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
             

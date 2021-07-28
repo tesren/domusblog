@@ -64,8 +64,14 @@
             the_posts_pagination(); ?>
 
     </div>
-
-    <?php endif;?>
+    
+    <?php else:?>
+        <div class="container mb-5 text-center" style="height:50vh;">
+            <h1 class="my-5"><?php echo pll_e('No hay resultados');?></h1>
+            <a class="btn btn-azul w-25" href="<?php echo get_home_url(); ?>"><?php echo pll_e('Volver'); ?></a>
+        </div>
+        
+    <?php endif; ?>
 
 
 <?php get_footer(); ?>

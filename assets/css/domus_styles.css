@@ -37,7 +37,7 @@ p{
     color: #707070;
 }
 
-.container-fluid, .row, .col, .col-lg-6{
+.container-fluid, .row, .col{
     padding: 0;
     margin: 0;
 } 
@@ -71,6 +71,7 @@ p{
 
 #pre_header_menu{
     margin-bottom: 0 !important;
+    display: block;
 }
 
 #pre_header_menu a{
@@ -173,13 +174,13 @@ p{
 
 .btn-azul{
     background-color: #34445f;
-    color: #FFF;
+    color: #FFF !important;
     font-weight: bold;
     transition: 0.2s;
     width: 100%;
 }
 .btn-azul:hover{
-  background-color: #080F24;
+  background-color: #080F24 !important;
   transition: 0.3s;
 }
 
@@ -324,6 +325,17 @@ footer span{
 
 /*MEDIA QUERY*/
 @media (min-width: 360px) and (max-width: 767px) {
+    
+    #pre_header_menu{
+        display: none !important;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
 
     #single-post #short-title{
         font-size: 2rem;
@@ -355,6 +367,17 @@ footer span{
   }
 
 @media (min-width: 768px) and (max-width: 992px) {
+    #pre_header_menu{
+        display: none !important;
+    }
+
+    h1{
+        font-size: 2.5rem;   
+    }
+
+    h3{
+        font-size: 1.9rem;
+    }
 
     #single-post #short-title{
         font-size: 2rem;
